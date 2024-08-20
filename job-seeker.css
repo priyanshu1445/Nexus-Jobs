@@ -1,0 +1,835 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    width: 100%;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #293748;
+    position: relative;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+}
+
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    /* Hide the navigation menu by default on tablet and mobile */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100%;
+        background-color: #293748;
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Show the navigation menu when active */
+    nav.active {
+        right: 0;
+    }
+
+    /* Hamburger Menu Styles */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .menu-toggle div {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further adjustments for mobile screens */
+    nav {
+        width: 50%;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+}
+
+/*job banner start from here  */
+/* Global reset and box-sizing */
+
+
+/* Job Banner Styles */
+.j_banner {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/job-hiring-vacancy-team-interview-career-recruiting.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #dbdce0;
+    padding-top: 220px;
+    background-attachment: fixed;
+}
+
+.j_banner h1 {
+    font-size: 7rem;
+}
+
+.j_banner h3 {
+    font-size: 2rem;
+    margin-bottom: 80px;
+}
+
+.j_banner a {
+    padding: 15px 32px;
+    background-color: #293748;
+    color: #dbdce0;
+    text-decoration: none;
+    font-size: large;
+    border-radius: 10px;
+    transition: color 0.5s;
+}
+
+.j_banner a:hover {
+    color: #000;
+    background-color: #f0a500;
+}
+
+/* Seeker Section Styles */
+.seeker {
+    width: 100%;
+    padding:  80px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.Simg {
+    width: 40%;
+}
+
+.Simg img {
+    width: 100%;
+    /* height: auto; Maintain aspect ratio */
+}
+
+.Stext {
+    width: 55%;
+    padding-top: 50px;
+    padding-left: 40px;
+}
+
+.Stext h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+    color: #293748;
+    margin-bottom: 20px;
+}
+
+.Stext h3 {
+    font-size: 1.5rem;
+    color: #293748;
+    margin-bottom: 10px;
+}
+
+.Stext p {
+    margin-bottom: 40px;
+    font-size: large;
+    color: gray;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive Styles */
+
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+    .j_banner {
+        padding-top: 150px; /* Adjust padding for smaller screens */
+    }
+
+    .j_banner h1 {
+        font-size: 5rem; /* Adjust font size */
+    }
+
+    .j_banner h3 {
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+
+    .j_banner a {
+        padding: 10px 20px;
+        font-size: medium;
+    }
+
+    .seeker {
+        padding: 50px 20px; /* Adjust padding for smaller screens */
+        flex-direction: column;
+    }
+
+    .Simg, .Stext {
+        width: 100%;
+        padding: 0;
+    }
+
+    .Stext {
+        padding-top: 20px;
+        padding-left: 0;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .j_banner {
+        padding-top: 100px; /* Further adjustment for mobile */
+    }
+
+    .j_banner h1 {
+        font-size: 4rem; /* Smaller font size for mobile */
+    }
+
+    .j_banner h3 {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+   
+    .j_banner a {
+        padding: 10px 20px;
+        font-size: medium;
+    }
+
+    .seeker {
+        padding: 30px 10px;
+    }
+
+    .Simg {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .Stext {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .Stext h1 {
+        font-size: 3rem;
+    }
+
+    .Stext h3 {
+        font-size: 1.2rem;
+    }
+
+    .Stext p {
+        font-size: medium;
+        margin-bottom: 20px;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .j_banner {
+        padding-top: 80px;
+    }
+
+    .j_banner h1 {
+        font-size: 3rem; /* Even smaller font size for extra small screens */
+    }
+
+    .j_banner h3 {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .j_banner a {
+        padding: 8px 16px;
+        font-size: small;
+    }
+
+    .seeker {
+        padding: 20px 5px;
+    }
+
+    .Simg {
+        width: 100%;
+    }
+
+    .Stext {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .Stext h1 {
+        font-size: 2rem;
+    }
+
+    .Stext h3 {
+        font-size: 1rem;
+    }
+
+    .Stext p {
+        font-size: small;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+/* latest job sextion starts from here */
+
+/*  nextsection starts from here  */
+/* General Styles */
+.what {
+    width: 100%;
+    padding:  50px 100px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+.upper-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 80px;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+}
+
+.up-left {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.up-left h3 {
+    margin-bottom: 10px;
+    color: #293748;
+}
+
+.up-left h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+    color: #617d9f;
+    /* font-style: italic; */
+}
+
+.up-right {
+    padding-top: 40px;
+    width: 50%;
+    color: gray;
+    box-sizing: border-box;
+}
+
+.lower {
+    width: 100%;
+    /* padding: 50px 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 30%;
+    background-color: #617d9f;
+    color: white;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.card i {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px gray;
+}
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+    .upper-text {
+        flex-direction: column;
+    }
+
+    .up-left, .up-right {
+        width: 100%;
+        padding: 0;
+        text-align: center; /* Center align text */
+    }
+
+    .up-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .up-right {
+        padding-top: 20px;
+    }
+
+    .card {
+        width: 45%; /* Adjust card width for tablet */
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    .what {
+        padding: 50px 20px; /* Reduce padding for mobile */
+    }
+
+    .up-left h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+        padding: 40px 20px; /* Adjust padding */
+    }
+
+    .card i {
+        font-size: 40px; /* Reduce icon size */
+    }
+
+    .card h3 {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+.resource {
+    width: 100%;
+    padding: 50px 100px;
+}
+
+.resource-text {
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 2rem;
+    color: #293748;
+}
+
+.resource-box {
+    width: 100%;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.r-card {
+    width: 30%;
+    padding: 10px;
+}
+
+.r-card img {
+    width: 100%;
+}
+
+.rtext {
+    font-size: 1.3rem;
+    color: #293748;
+    padding: 10px;
+}
+
+.rtext h3 {
+    margin-bottom: 10px;
+}
+
+.rtext p {
+    font-size: medium;
+}
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .resource {
+        padding: 30px 50px;
+    }
+
+    .resource-text {
+        font-size: 1.5rem;
+    }
+
+    .r-card {
+        width: 45%;
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+}
+
+/* Media Query for Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    .resource {
+        padding: 20px 20px;
+    }
+
+    .resource-text {
+        font-size: 1.2rem;
+    }
+
+    .r-card {
+        width: 100%;
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .rtext {
+        font-size: 1rem;
+    }
+}
+
+/* form-box start form here */
+
+.form-box{
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-text{
+    width: 40%;
+    /* background-color: red; */
+}
+
+.f-text img{
+    padding-top: 100px;
+    width: 100%;
+    height: 90%;
+}
+
+.f-text p{
+    margin-bottom: 30px;
+    font-size: large;
+    color: grey;
+}
+
+
+.f-image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+.f-image img{
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+    
+} 
+
+
+.f-image h2{
+    padding-left: 20px;
+}
+
+.f-detail h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.f-detail i{
+    padding: 0px 20px;
+}
+
+.icons{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    
+}
+.icons a{
+    color: white;
+    background-color: #293748;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: large;
+
+
+}
+.f-data{
+    width: 50%;
+
+}
+
+.f-data h1{
+    font-size: 3rem;
+    color: #293748;
+    text-decoration: underline;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.f-data form{
+    width: 100%;
+}
+
+.field{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.field p{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.field span{
+    color: red;
+}
+.field input{
+    width: 100%;
+    outline: none;
+    background-color: whitesmoke;
+    font-size: large;
+    border: none;
+    padding: 10px;
+}
+
+.field textarea{
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    background-color: whitesmoke;
+    font-size: large;
+    outline: none;
+    border: none;
+}
+
+/* Tablet view adjustments */
+@media (max-width: 1024px) {
+    .form-box {
+        padding: 40px 50px; /* Adjust padding for tablets */
+    }
+
+    .f-text, .f-data {
+        width: 100%; /* Make text and data sections full width on tablets */
+        margin-bottom: 30px; /* Add margin between sections */
+    }
+    
+
+    .f-data h1 {
+        font-size: 2.5rem; /* Reduce heading size for tablets */
+    }
+   
+
+    .icons {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center;
+    }
+
+    .icons a {
+        margin-bottom: 20px; /* Add space between icons */
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+    .form-box {
+        padding: 30px 20px; /* Further reduce padding for mobiles */
+        flex-direction: column; /* Stack elements vertically on mobile */
+    }
+
+    .f-text, .f-data {
+        width: 100%; /* Full width for text and data sections */
+        margin-bottom: 20px; /* Add margin between sections */
+    }
+
+    .f-text img {
+        width: 100%;
+        height: 500px; /* Make image height auto for better responsiveness */
+    }
+
+    .f-data h1 {
+        font-size: 2rem; /* Smaller heading for mobiles */
+    }
+
+    .field input, .field textarea {
+        font-size: medium; /* Adjust font size for input fields */
+    }
+
+    .icons {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center;
+    }
+
+    .icons a {
+        margin-bottom: 15px; /* Add space between icons */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+/*  footer section starts from heree  */
+/* Base Styles (Your Original Code) */
+footer {
+    width: 100%;
+    background-color: #293748;
+    display: flex;  
+    justify-content: space-between;
+}
+
+footer .box {
+    width: 30%;
+    padding: 50px;
+    color: #dbdce0;
+}
+
+.box li {
+    margin-bottom: 10px;
+    font-size: normal;
+}
+
+.box i {
+    padding-right: 20px;
+}
+
+.box p {
+    font-size: medium;
+}
+
+.box h1 {
+    margin-bottom: 10px;
+}
+
+.box a {
+    color: #dbdce0;
+    text-decoration: none;
+}
+
+.icons {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.icons i {
+    margin-right: 20px;
+    font-size: medium;
+    padding: 18px;
+    background-color: #dbdce0;
+    border-radius: 50%;
+    color: #293748;
+}
+
+/* Responsive Styles */
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .box {
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .icons {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .icons i {
+        margin-right: 10px;
+        font-size: large;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    footer .box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .icons i {
+        margin-right: 5px;
+        font-size: medium;
+        padding: 15px;
+    }
+}
+

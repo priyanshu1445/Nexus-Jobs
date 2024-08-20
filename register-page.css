@@ -1,0 +1,402 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+header {
+    width: 100%;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #293748;
+    position: relative;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+}
+
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    /* Hide the navigation menu by default on tablet and mobile */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100%;
+        background-color: #293748;
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Show the navigation menu when active */
+    nav.active {
+        right: 0;
+    }
+
+    /* Hamburger Menu Styles */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .menu-toggle div {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further adjustments for mobile screens */
+    nav {
+        width: 50%;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+}
+
+
+    /*  get in touch section  starts from here */
+
+    .Touch {
+        font-size: 2rem;
+        color: #293748;
+        text-decoration: underline;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        /* padding: 15pxs; */
+        text-align: center;
+    }
+    
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+        .Touch {
+            font-size: 1.5rem;
+            padding: 30px;
+        }
+    }
+    
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+        .Touch {
+            font-size: 1.2rem;
+            padding: 20px;
+        }
+    }
+    
+
+
+
+.R-form {
+    text-align: center;
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/modern-office-desk-composition-with-technological-device.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    /* background-attachment: fixed; */
+}
+
+.R-form h1 {
+    color: #fff;
+    font-size: 3rem;
+    padding-top: 150px;
+}
+
+.R-form h3 {
+    font-size: 1.6rem;
+    color: white;
+    padding: 20px;
+}
+
+/* Responsive Styles for Tablets and Mobile */
+@media (max-width: 1024px) {
+    .R-form {
+        height: 50vh;
+    }
+
+    .R-form h1 {
+        font-size: 2.5rem;
+        padding-top: 100px;
+    }
+
+    .R-form h3 {
+        font-size: 1.8rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .R-form {
+        height: 40vh;
+    }
+
+    .R-form h1 {
+        font-size: 2rem;
+        padding-top: 60px;
+    }
+
+    .R-form h3 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
+
+
+
+
+.form-box {
+    width: 100%;
+    /* box-shadow: 2px 2px 5px gra; */
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+}
+
+.l-form, .r-form {
+    width: 50%;
+    padding: 0px 50px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.input {
+    width: 100%;
+}
+
+.input p {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.input input {
+    padding: 10px;
+    font-size: large;
+    outline: none;
+    border: none;
+    background-color: whitesmoke;
+    width: 100%; /* Changed to 100% to fit the container */
+    margin-bottom: 30px;
+}
+
+.input textarea {
+    width: 100%; /* Changed to 100% to fit the container */
+    padding-left: 10px;
+    height: 240px;
+    outline: none;
+    border: none;
+    background-color: whitesmoke;
+}
+
+/* Responsive Styles for Tablets and Mobile */
+@media (max-width: 1024px) {
+    .form-box {
+        padding: 30px 50px;
+        flex-direction: column; /* Stack the forms vertically */
+    }
+
+    .l-form, .r-form {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 20px; /* Add spacing between stacked forms */
+    }
+
+    .input input, .input textarea {
+        width: 100%; /* Full width for inputs */
+    }
+}
+
+@media (max-width: 768px) {
+    .form-box {
+        padding: 20px;
+    }
+
+    .l-form, .r-form {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 15px; /* Adjust spacing for smaller screens */
+    }
+
+    .input input, .input textarea {
+        width: 100%; /* Full width for inputs */
+    }
+}
+
+
+
+/*  submit section start from here */
+
+
+.submit
+{
+    width: 25%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
+
+.submit input{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: large;
+    background-color: #293748;
+    font-size: large;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    color: white;
+}
+/*  footer section starts from heree  */
+
+footer {
+    width: 100%;
+    background-color: #293748;
+    display: flex;  
+    justify-content: space-between;
+}
+
+footer .box {
+    width: 30%;
+    padding: 50px;
+    color: #dbdce0;
+}
+
+.box li {
+    margin-bottom: 10px;
+    font-size: normal;
+}
+
+.box i {
+    padding-right: 20px;
+}
+
+.box p {
+    font-size: medium;
+}
+
+.box h1 {
+    margin-bottom: 10px;
+}
+
+.box a {
+    color: #dbdce0;
+    text-decoration: none;
+}
+
+.icons {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.icons i {
+    margin-right: 20px;
+    font-size: medium;
+    padding: 18px;
+    background-color: #dbdce0;
+    border-radius: 50%;
+    color: #293748;
+}
+
+/* Responsive Styles */
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .box {
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .icons {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .icons i {
+        margin-right: 10px;
+        font-size: large;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    footer .box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .icons i {
+        margin-right: 5px;
+        font-size: medium;
+        padding: 15px;
+    }
+}
